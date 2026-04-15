@@ -6,6 +6,7 @@ $products =  ProductData::getAll();
 	<div class="col-md-12">
 	<h1>Bienvenido a Kepler One</h1>
 	<a href="./?view=products&opt=new" class="btn btn-default"><i class="fa fa-asterisk"></i> Nuevo Producto</a>
+	<a href="products-pdf.php" target="_blank" class="btn btn-default"><i class="fa fa-file-pdf-o"></i> Descargar PDF</a>
 	<br><br>
 <?php if(count($products)>0):?>
 	<table class="table table-bordered">

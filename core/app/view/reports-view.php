@@ -39,7 +39,7 @@
 	
 	<div class="col-md-12">
 		<?php if(isset($_GET["product_id"])&& isset($_GET["sd"]) && isset($_GET["ed"]) ):?>
-
+<a href="reports-pdf.php?product_id=<?php echo $_GET["product_id"]; ?>&sd=<?php echo $_GET["sd"]; ?>&ed=<?php echo $_GET["ed"]; ?>" target="_blank" class="btn btn-default pull-right"><i class="fa fa-file-pdf-o"></i> Descargar PDF</a>
 <?php 
 
 $sd = strtotime($_GET["sd"]);
@@ -129,8 +129,8 @@ $outtotal+= ($out->s);
 			<?php endfor;?>
 	<tr>
 		<td>Total</td>
-		<td><?php echo number_format($outtotal,2,'.',','); ?></td>
 		<td><?php echo number_format($intotal,2,'.',','); ?></td>
+		<td><?php echo number_format($outtotal,2,'.',','); ?></td>
 		<td><?php echo number_format($intotal-($outtotal),2,'.',','); ?></td>
 	</tr>
 </table>
