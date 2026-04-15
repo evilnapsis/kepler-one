@@ -16,7 +16,7 @@ create table operation(
 	product_id int,/*1. in, 2. out*/
 	kind int,/*1. in, 2. out*/
 	created_at datetime,
-	foreign key (product_id) references product(id)
+	foreign key (product_id) references product(id) on delete cascade
 );
 
 

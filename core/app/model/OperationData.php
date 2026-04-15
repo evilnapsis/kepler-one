@@ -1,16 +1,19 @@
 <?php
 class OperationData {
 	public static $tablename = "operation";
+	public $id, $q, $product_id, $kind, $created_at,$s;
 
-	public function OperationData(){
-
-
+	public function __construct(){
+		$this->id = null;
+		$this->q = null;
+		$this->product_id = null;
+		$this->kind = null;
 		$this->created_at = "NOW()";
 	}
 
 	public function add(){
 		$sql = "insert into ".self::$tablename." (q,product_id,kind,created_at) ";
-		$sql .= "value (\"$this->q\",\"$this->product_id\",\"$this->kind\",$this->created_at)";
+		echo $sql .= "value (\"$this->q\",\"$this->product_id\",\"$this->kind\",$this->created_at)";
 		Executor::doit($sql);
 	}
 

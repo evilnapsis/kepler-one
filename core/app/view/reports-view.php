@@ -94,7 +94,7 @@ Morris.Area({
 <table class="table table-bordered">
 	<thead>
 		<th>Fecha</th>
-		<th>Enttadas</th>
+		<th>Entradas</th>
 		<th>Salidas</th>
 		<th>Diferencia</th>
 	</thead>

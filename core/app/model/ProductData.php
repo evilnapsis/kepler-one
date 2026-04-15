@@ -1,8 +1,9 @@
 <?php
 class ProductData {
 	public static $tablename = "product";
+	public $id, $name, $description, $code, $price, $created_at;
 
-	public function ProductData(){
+	public function __construct(){
 
 
 		$this->created_at = "NOW()";

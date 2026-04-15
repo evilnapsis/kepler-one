@@ -29,12 +29,19 @@ if(isset($_GET["opt"]) && $_GET["opt"]!=""){
 		Core::redir("./");
 	}
 	else if($opt=="addout"){
-		$op = new OperationData();
-		$op->product_id = $_POST["product_id"];
-		$op->q = $_POST["q"];
-		$op->kind = 2;
-		$op->add();
-		Core::redir("./");
+		$in = OperationData::sumByPK($_POST["product_id"],1);
+		$out = OperationData::sumByPK($_POST["product_id"],2);
+		$q = $in->s - $out->s;
+		if($_POST["q"]<=$q){
+			$op = new OperationData();
+			$op->product_id = $_POST["product_id"];
+			$op->q = $_POST["q"];
+			$op->kind = 2;
+			$op->add();
+			Core::redir("./");
+		}else{
+			echo "<script>alert('No hay suficientes existencias');window.location='./';</script>";
+		}
 	}
 	else if($opt=="del"){
 		$op = ProductData::getById($_GET["id"]);

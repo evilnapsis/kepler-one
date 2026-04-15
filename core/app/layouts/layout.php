@@ -45,7 +45,7 @@
 <div class="row">
 <div class="col-md-12">
 <hr>
-<p class="text-center">Evilnapsis &copy; 2017</p>
+<p class="text-center">Evilnapsis &copy; 2026</p>
 </div>
 </div>
 </div>
